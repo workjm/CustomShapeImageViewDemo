@@ -9,6 +9,7 @@
         </attr>
         
         <attr name="svg_raw_resource" format="reference" />
+        <attr name="drawable_resource" format="reference" />
         
     </declare-styleable>
 

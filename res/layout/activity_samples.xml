@@ -45,7 +45,13 @@
             app:svg_raw_resource="@raw/shape_star"
             android:scaleType="centerCrop" />
     </LinearLayout>
-
+    <com.meg7.widget.CustomDrawableShapeImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/sample_1"
+            app:drawable_resource="@drawable/my_shape"
+            android:scaleType="centerCrop" />
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
