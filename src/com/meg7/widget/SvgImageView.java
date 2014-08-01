@@ -39,7 +39,27 @@ public class SvgImageView extends BaseImageView {
         mSvgRawResourceId = a.getResourceId(R.styleable.CustomShapeImageView_svg_raw_resource, 0);
         a.recycle();
     }
+    
+/*******************************************************************************
+ * USAGE:
+    // Load and parse a SVG
+	SVG svg = new SVGBuilder()
+            .readFromResource(getResources(), R.raw.someSvgResource) // if svg in res/raw
+            .readFromAsset(getAssets(), "somePicture.svg")           // if svg in assets
+            // .setWhiteMode(true) // draw fills in white, doesn't draw strokes
+            // .setColorSwap(0xFF008800, 0xFF33AAFF) // swap a single colour
+            // .setColorFilter(filter) // run through a colour filter
+            // .set[Stroke|Fill]ColorFilter(filter) // apply a colour filter to only the stroke or fill
+            .build();
 
+			// Draw onto a canvas
+			canvas.drawPicture(svg.getPicture());
+
+			// Turn into a drawable
+			Drawable drawable = svg.createDrawable();
+			// drawable.draw(canvas);
+			// imageView.setImageDrawable(drawable);
+ ********************************************************************************/
     public static Bitmap getBitmap(Context context, int width, int height, int svgRawResourceId) {
         Bitmap bitmap = Bitmap.createBitmap(width, height,
                 Bitmap.Config.ARGB_8888);
